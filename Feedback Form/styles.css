@@ -1,0 +1,42 @@
+#form {width: 70%;
+height: 90%;
+margin: auto ;
+
+color: #f0f0f0;
+display: block;
+}
+
+
+#title {font-family: Railway; font-size: 2rem; text-align: center;  padding-top: 3%}
+
+#description {font-family: sans-serif; text-align: center;font-size: 13px; font-style: italic}
+
+body {width: 100%; height: 100%; background-color: #404243; color: White; overflow-x: hidden;}
+
+
+form{width: 60%;
+     margin: 10px auto;
+     color: whitesmoke;
+     max-width: 500px;
+     min-width: 300px;
+     display: block
+    }
+
+
+label {display: block;
+        margin: 10px auto;
+}
+
+input, textarea, select {width: 100%; margin: 5px auto;}
+
+input, textarea, {background-color: #ccc; border: 1px solid #1a2c73; color: white
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+    display: inline;
+  }
+
+input[type="submit"] { border:2px solid white; width: 60%; height: 2em; display:block; margin: 2em auto; background-color:#bbb ; color: white}

@@ -1,0 +1,20 @@
+
+#title, #description {font-family: 'Times New Roman', Times, serif; text-align: center; }
+
+img {display:block; margin: 10px auto; max-width: 100%; height: auto}
+
+#img-caption {font-style: italic; font-weight: bold; width: 30vw; max-width: 400px ; font-size: 12px; text-align: center; margin: 0px auto}
+
+
+body {background-color: #dad9d9; font-family: Railway, sans-serif; font-size: 20px; width: 50vw; max-width: 600px; text-align: justify; display:block; margin: 0 auto}
+
+#tribute-info {font-size: 15px; }
+
+footer {font-size: 10px; padding: 2% 0}
+
+a {color: black}
+
+
+
+
+

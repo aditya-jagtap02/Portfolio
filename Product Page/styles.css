@@ -1,0 +1,58 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {scroll-padding-top: 11vh;}
+main {margin-top: 12vh; padding: 0 5%; font-family: sans-serif; }
+body {background-color:#009a98; color: whitesmoke;overflow-x: hidden;}
+#header {
+    position: fixed;
+    width: 100vw;
+    height: 11vh;
+    background-color: #085562;
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    top: 0
+  }
+
+  #title{font-size: 3rem; text-align: center; font-family: Arial, Helvetica, sans-serif; color: #001d2a;}
+
+  h3{text-align: center; text-decoration: underline;color:#9af089;}
+  
+  .nav {display: block; margin: 20px; float: right; width:auto; height: auto; text-align: center; border: 2px solid whitesmoke; box-shadow: 3px 2px 2px black; z-index: 999;}
+
+  #header-img{display: block; float: left;}
+
+  .nav-link {text-decoration: none; color: #f2ff66;}
+
+  .nav:hover {background-color: #001d2a; color: white; border-color: #f2ff66;}
+  
+  .about {width: 100%; display: inline-flex; margin: 10vh 10vh;}
+  .info {margin-top: 1rem; text-align: justify; width: 60%; margin-left: 10vw;}
+  .creative {width: 30%; height: 30%; vertical-align: middle;}
+  
+  h2 {text-align: center;padding-top: 2vh; text-decoration: underline; color: #001d2a;}
+  #video {display:block; margin: 5vh auto}
+
+  #products {display: flex; padding: 0 10vh; margin: 30px 0;}
+  .product {width: 260px; height: 350px; border: 2px solid black; margin: 1%; background-color: whitesmoke;}
+  .product:hover {box-shadow: 0 0 5px #f2ff66;}
+  .description, .price {width:100%; height: auto; border-bottom: 1px solid black; color: black}
+  
+  #Nav4 {width: 100%; height: auto; background-color: #001d2a;}
+  form {width: 60%; display: block; margin: 0 auto;}
+  input,textarea,.contact {width: 100%; margin-bottom: 3px; font-weight: 900;}
+  input {height: 30px}
+  .socials {width:60%}
+  .fab {margin-right: 5%; color:white;}
+  #submit:hover {background-color: darkblue; color: white}
+
+  @media only screen and (max-width:720px) {
+    #products {width:100vw; display: inline-flex}
+    .product {width:24%;height: 40vh}
+    body {overflow-x: hidden;}
+    .nav {margin: 4px}
+    .about {display: block; padding: auto;}
+    
+  }

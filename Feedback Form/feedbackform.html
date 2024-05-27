@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Feedback Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+<main>
+  <h1 id="title">Feedback Form</h1>
+    <p id="description">Thank you for taking the time to help us improve</p>
+  <div id="form">
+    
+  <form action="" method="POST" id="survey-form">
+    
+    <section class="section1">
+      <label id="name-label">Name: <input type="text" name="name" id="name" placeholder="Enter your name" required> </label>
+
+      <label id="email-label">Email: <input type="email"  name="email" id="email" placeholder="Enter your Email" required></label>
+
+      <label id="number-label">Age (optional): <input type="number" id="number" min="10" max="99" name="age" placeholder="Age"></label>
+      <label for="role">
+      
+        Select Your Current Role: 
+        <select id="dropdown" name="role" value="select role">
+          <option disabled>Select Current Role</option>
+        <option>Student</option>
+        <option>Full time job</option>
+        <option>Full time learner</option>
+        <option>Other</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="section2">
+
+    Would you recommend us?
+		<label for="definitely"><input type="radio" id="definitely"  value="definitely" name="radio" class="inline" checked>Definitely</label>
+
+		<label for="maybe"><input id="maybe" type="radio" value="maybe" name="radio" class="inline">Maybe</label>
+		<label for="notsure"><input id="notsure" type="radio" value="notsure" name="radio" class="inline">Not Sure</label>
+	</section>
+	
+    <section class="section3">
+      <label id="feedback">
+		What would you like to see improved? (Check all that apply)<br>
+		<label for="projects"><input type="checkbox" name="projects" value="projects" id="projects" class="inline">Projects<br></label>
+		<label for="response"><input type="checkbox" name="response" value="response" id="response"  class="inline">Response<br></label>
+		<label for="community"><input type="checkbox" name="community" value="community" id="community" class="inline">Community<br></label>
+		<label for="services"><input type="checkbox" name="services" value="services" id="services" class="inline">Services<br></label>
+		
+		Any Comments for us?<br>
+		<textarea name="comments" placeholder="Enter your comments here"></textarea>
+    </section>
+<input type="submit" id="submit" value="Submit">
+</form>
+</div>
+</main>
+  </body>
+  </html>
