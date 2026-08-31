@@ -49,6 +49,7 @@ function MenuItem({
   const marqueeInnerRef = useRef(null);
   const animationRef = useRef(null);
   const [repetitions, setRepetitions] = useState(4);
+  const [isActive, setIsActive] = useState(false);
 
   const animationDefaults = { duration: 0.6, ease: "expo" };
 
@@ -66,7 +67,7 @@ function MenuItem({
       if (!marqueeContent) return;
       const contentWidth = marqueeContent.offsetWidth;
       const viewportWidth = window.innerWidth;
-      const needed = Math.ceil(viewportWidth / contentWidth) + 2;
+      const needed = Math.ceil(viewportWidth / (contentWidth || 300)) + 2;
       setRepetitions(Math.max(4, needed));
     };
 
@@ -140,15 +141,35 @@ function MenuItem({
       .to(marqueeInnerRef.current, { y: edge === "top" ? "101%" : "-101%" }, 0);
   };
 
+  const handleTouchToggle = () => {
+    if (!itemRef.current || !marqueeRef.current || !marqueeInnerRef.current) return;
+    if (!isActive) {
+      setIsActive(true);
+      gsap
+        .timeline({ defaults: animationDefaults })
+        .set(marqueeRef.current, { y: "101%" }, 0)
+        .set(marqueeInnerRef.current, { y: "-101%" }, 0)
+        .to([marqueeRef.current, marqueeInnerRef.current], { y: "0%" }, 0);
+    } else {
+      setIsActive(false);
+      gsap
+        .timeline({ defaults: animationDefaults })
+        .to(marqueeRef.current, { y: "101%" }, 0)
+        .to(marqueeInnerRef.current, { y: "-101%" }, 0);
+    }
+  };
+
   return (
     <div
-      className="flex-1 relative overflow-hidden text-center"
+      className="flex-1 relative overflow-hidden text-center select-none"
       ref={itemRef}
       style={{ borderTop: isFirst ? "none" : `1px solid ${borderColor}` }}
+      onClick={handleTouchToggle}
     >
       <a
-        className="flex items-center justify-center h-full relative cursor-pointer uppercase no-underline font-semibold text-[4vh]"
-        href={link}
+        className="flex items-center justify-center h-full relative cursor-pointer uppercase no-underline font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[4vh] tracking-wider"
+        href={link || "#"}
+        onClick={(e) => { if (!link) e.preventDefault(); }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{ color: textColor }}
@@ -168,17 +189,17 @@ function MenuItem({
               style={{ color: marqueeTextColor }}
             >
               <span
-                className="whitespace-nowrap uppercase font-bold text-[3vh] px-6"
+                className="whitespace-nowrap uppercase font-bold text-base sm:text-xl md:text-2xl lg:text-[3vh] px-3 sm:px-6"
                 style={{ color: marqueeTextColor }}
               >
                 {text}
               </span>
 
-              <div className="flex items-center gap-3 px-4">
+              <div className="flex items-center gap-2 sm:gap-3 px-2 sm:px-4">
                 {skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="whitespace-nowrap px-4 py-2 rounded-full border text-sm md:text-base font-medium"
+                    className="whitespace-nowrap px-2.5 py-1 sm:px-4 sm:py-2 rounded-full border text-xs sm:text-sm md:text-base font-medium"
                     style={{
                       color: marqueeTextColor,
                       borderColor: marqueeTextColor,
@@ -197,3 +218,4 @@ function MenuItem({
 }
 
 export default FlowingMenu;
+

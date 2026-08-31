@@ -39,20 +39,12 @@ const skillItems = [
 
 function Skills() {
   return (
-    <section
-      id="skills"
-      className=" py-20"
-    >
-      <h2 className="w-[90%] mx-auto text-3xl font-bold font-mono mb-8">
+    <section id="skills" className="py-14 sm:py-20">
+      <h2 className="w-[90%] max-w-7xl mx-auto text-2xl sm:text-3xl md:text-4xl font-bold font-mono mb-6 sm:mb-8">
         SKILLS
       </h2>
 
-      <div
-        style={{
-          height: "500px",
-          position: "relative",
-        }}
-      >
+      <div className="w-full h-[380px] sm:h-[450px] md:h-[500px] relative">
         <FlowingMenu
           items={skillItems}
           speed={15}
@@ -67,4 +59,4 @@ function Skills() {
   );
 }
 
-export default Skills;
+export default Skills;

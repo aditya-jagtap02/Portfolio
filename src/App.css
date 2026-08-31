@@ -1,6 +1,17 @@
+html,
 body {
-    background: black;
-    color: white
+  background: black;
+  color: white;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -10,4 +21,4 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
+}

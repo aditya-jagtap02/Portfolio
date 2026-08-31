@@ -2,6 +2,7 @@ import MovieVault from "../assets/img/movie-vault.png";
 import E_Commerce from "../assets/img/e-commerce.png";
 import CaprockFS from "../assets/img/caprockfs.png";
 import EuroFresh from "../assets/img/euro-fresh.png";
+
 function Projects() {
   const projects = [
     {
@@ -43,35 +44,38 @@ function Projects() {
   ];
 
   return (
-    <div className="w-[90%] h-screen mx-auto py-10">
-      <h2 className="text-3xl font-bold font-mono mb-6">PROJECTS</h2>
+    <div className="w-[90%] max-w-7xl min-h-screen mx-auto py-14 sm:py-20 flex flex-col justify-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-mono mb-6 sm:mb-8">
+        PROJECTS
+      </h2>
 
-      <div className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory pb-4">
+      <div className="flex gap-5 sm:gap-6 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory pb-6 px-1">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="min-w-[350px] max-w-[350px] flex-shrink-0 rounded-xl border border-white/20 bg-white/10 p-6 text-white shadow-lg shadow-black/20 backdrop-blur-xl snap-center flex flex-col"
+            className="w-[82vw] sm:w-[340px] md:w-[350px] min-w-[270px] sm:min-w-[320px] md:min-w-[350px] max-w-[360px] flex-shrink-0 rounded-2xl border border-white/20 bg-white/10 p-5 sm:p-6 text-white shadow-lg shadow-black/20 backdrop-blur-xl snap-center flex flex-col transition-all duration-300 hover:border-white/40"
           >
-            <div className="h-52 rounded-xl overflow-hidden mb-4">
+            <div className="h-44 sm:h-52 rounded-xl overflow-hidden mb-4 bg-black/30">
               <img
                 src={project.image}
                 alt={project.Name}
-                className="w-full h-full object-cover transition-all duration-700 ease-in-out hover:scale-110"
+                className="w-full h-full object-cover transition-all duration-700 ease-in-out hover:scale-105"
+                loading="lazy"
               />
             </div>
 
-            <h3 className="text-xl font-bold mb-3">{project.Name}</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{project.Name}</h3>
 
-            <p className="text-sm text-gray-300 flex-grow">
+            <p className="text-xs sm:text-sm text-gray-300 flex-grow leading-relaxed">
               {project.Description}
             </p>
 
-            <div className="mt-4">
+            <div className="mt-4 pt-2">
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600"
+                className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base font-semibold bg-blue-500 rounded-lg hover:bg-blue-600 active:scale-95 transition-all shadow-md hover:shadow-blue-500/30"
               >
                 Live Demo
               </a>
@@ -80,7 +84,7 @@ function Projects() {
                 {project.tech.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 text-xs bg-white/20 rounded-full"
+                    className="px-2.5 py-1 text-[11px] sm:text-xs bg-white/20 rounded-full font-mono"
                   >
                     {tech}
                   </span>
@@ -95,3 +99,4 @@ function Projects() {
 }
 
 export default Projects;
+
