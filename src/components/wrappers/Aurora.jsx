@@ -199,15 +199,16 @@ export default function Aurora({ children, ...props }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [amplitude]);
 
-return (
-  <div className="relative w-full h-screen overflow-hidden">
-    <div
-      ref={ctnDom}
-      className="absolute inset-0"
-    />
+  return (
+    <div className="relative w-full h-screen min-h-[500px] overflow-hidden">
+      <div
+        ref={ctnDom}
+        className="absolute inset-0"
+      />
 
-    <div className="relative z-10 flex h-full w-full items-center justify-center">
-      {children}
+      <div className="relative z-10 flex h-full w-full items-center justify-center">
+        {children}
+      </div>
     </div>
-  </div>
-);}
+  );
+}
