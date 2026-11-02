@@ -1,35 +1,43 @@
 import "./App.css";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen bg-black text-white selection:bg-sky-500/30 selection:text-white">
       <Navbar />
-      <section id="home">
-      <Hero  />
-      </section>
 
-      <section id="projects">
-      <Projects />
-      </section>
+      <main>
+        <section id="home" className="relative">
+          <Hero />
+        </section>
 
-      <section id="skills">
-      <Skills />
-      </section>
+        <section id="projects" className="relative">
+          <Projects />
+        </section>
 
-      <section id="about">
-      <About />
+        <section id="skills" className="relative">
+          <Skills />
+        </section>
+
+        <section id="experience" className="relative">
+          <Experience />
+        </section>
+
+        <section id="about" className="relative">
+          <About />
+        </section>
+      </main>
+
+      <section id="contact" className="relative">
+        <Contact />
       </section>
-      
-      <section id="contact">
-      <Contact />
-      </section>
-    </>
+    </div>
   );
 }
 
