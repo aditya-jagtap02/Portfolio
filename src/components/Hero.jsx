@@ -1,5 +1,5 @@
 import Aurora from "../components/wrappers/Aurora";
-import { ArrowDown, ArrowUpRight, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Hero() {
@@ -18,20 +18,7 @@ function Hero() {
       speed={1}
     >
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20 pb-12">
-        {/* Watermelon UI Status Badge */}
-        {/* <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/15 bg-black/40 backdrop-blur-md text-xs sm:text-sm font-medium text-neutral-200 shadow-[0_0_20px_rgba(0,0,0,0.5)] mb-4 animate-wm-float">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-          </span>
-          <span className="tracking-wide">Available for Freelance & Full-time Roles</span>
-        </div> */}
-
-        {/* Introduction */}
-        {/* <p className="text-sm sm:text-base md:text-lg font-mono text-neutral-400 tracking-wider uppercase mb-1">
-          Hey There,
-        </p> */}
-
+        
         {/* Primary Name Display */}
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-mono tracking-tight leading-tight text-white">
           {/* I'm{" "} */}
@@ -42,7 +29,7 @@ function Hero() {
 
         {/* Subtitle / Role */}
         <h2 className="mt-3 sm:mt-4 text-lg sm:text-2xl md:text-3xl font-mono text-neutral-300 font-medium max-w-2xl">
-          A Full Stack Web Developer
+          Full-Stack MERN Developer
         </h2>
 
         <p className="mt-2 text-xs sm:text-sm md:text-base text-neutral-400 max-w-xl mx-auto font-sans leading-relaxed">

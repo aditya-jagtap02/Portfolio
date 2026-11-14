@@ -1,4 +1,4 @@
-import { Briefcase, Calendar, CheckCircle2, ChevronRight, GraduationCap, MapPin, Sparkles } from "lucide-react";
+import { Briefcase, Calendar,  ChevronRight, GraduationCap, MapPin, } from "lucide-react";
 import SectionHeader from "./common/SectionHeader";
 
 const experiences = [

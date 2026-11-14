@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { ExternalLink, Sparkles, LayoutGrid, List } from "lucide-react";
+import { ExternalLink, LayoutGrid, List } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import SectionHeader from "./common/SectionHeader";
 import MovieVault from "../assets/img/movie-vault.png";
 import E_Commerce from "../assets/img/e-commerce.png";
 import CaprockFS from "../assets/img/caprockfs.png";
 import EuroFresh from "../assets/img/euro-fresh.png";
+import RealtyCRM from "../assets/img/realty-crm.png";
+import Aprvve from "../assets/img/aprvve.png"
+
 
 function Projects() {
   const [viewMode, setViewMode] = useState("grid"); // "grid" or "carousel"
@@ -58,6 +61,30 @@ function Projects() {
       github: "https://github.com/aditya-jagtap02",
       image: EuroFresh,
       tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    },
+    {
+      id: 5,
+      number: "05",
+      Name: "Aprvve - CRM System",
+      category: "SaaS Client Approval & Project Management Platform",
+      Description:
+        "Aprvve is a full-stack SaaS platform designed to streamline collaboration between agencies and their clients. It simplifies project management, task tracking, content reviews, and client approvals through a centralized workspace, helping teams reduce communication gaps and manage workflows more efficiently.",
+      link: "https://aprvve.vercel.app/",
+      github: "https://github.com/aditya-jagtap02",
+      image: Aprvve,
+      tech: ["React JS", "Express JS", "Node JS", "MongoDB", "Tailwind CSS",],
+    },
+    {
+      id: 6,
+      number: "06",
+      Name: "Realty CRM - ERP System",
+      category: "Real Estate Management Platform for Builders",
+      Description:
+        "Realty CRM is a comprehensive web-based management system designed to streamline real estate operations. It provides centralized management of projects, properties, inventory, customers, and sales activities, along with interactive dashboards and analytics to help teams monitor performance and manage business operations efficiently.",
+      link: "https://realty-crm-peach.vercel.app/",
+      github: "https://github.com/aditya-jagtap02",
+      image: RealtyCRM,
+      tech: ["React JS", "Express JS", "Node JS", "MongoDB", "Tailwind CSS"],
     },
   ];
 

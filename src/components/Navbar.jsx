@@ -74,10 +74,7 @@ function Navbar() {
             className="flex items-center gap-2.5 group cursor-pointer focus:outline-none"
             aria-label="Aditya Jagtap Portfolio Home"
           >
-            <div className="relative flex h-2.5 w-2.5 items-center justify-center">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-            </div>
+           
             <div className="flex items-center font-mono font-bold tracking-tight text-base sm:text-lg group-hover:text-sky-300 transition-colors">
               <span>ADITYA</span>
               <span className="text-sky-400 ml-0.5">.DEV</span>
